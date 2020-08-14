@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* bien css */
+:root {
+  /* tuong duong nhu the html */
+  --primaryColor: #64FE2E;
+}
+
+p.title::first-letter {
+  color:red;
+  font-size:50px;
+}
+p.title::first-line {
+  /* bien cuc bo - override bien */
+  --primaryColor: #B45F04;
+  color: var(--primaryColor);
+  font-size: 1.8rem;
+}
+.my-color-apple, .my-color-android {
+  color: var(--primaryColor);
+}
+
+p.title::before {
+  /* content: url('../image/chung-khoan.png'); */
+  content: 'hoc';
+}
+p.title::after{
+  content: 'ReactJS';
+}
+p.title::selection{
+  color: yellow;
+}
+p.text-shadow {
+  text-shadow: 10px 5px 1px black;
+}
+div.box {
+  width: 15rem;
+  height: 15rem;
+  /* background-color:yellow;
+  background-image: url('../image/test.png');
+  background-repeat: no-repeat; */
+  /* background-position: center center; */
+  /* background-size: 1rem 1rem;
+  background-attachment: fixed; */
+  /* background-attachment: scroll; */
+  background: yellow url('../image/test.png') no-repeat center center;
+  border-top: 0.3rem solid #642EFE;
+  
+}
