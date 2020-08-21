@@ -1,0 +1,41 @@
+/* setting basic */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+input, textarea {
+  font-family: 'Lato', sans-serif;
+}
+:root{
+  --primary-color: #64c29e;
+  --title-color: #353738;
+  --text-color: #848789;
+  --bg-light: #f7f7f7;
+  --bg-dark:  #282f35;
+  --border-input: #d3d7d9;
+  --color-text-input: #c8c8c8;
+}
