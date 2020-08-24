@@ -19,7 +19,7 @@ body {
 }
 img {
   display: block;
-  width: 100%;
+  /* width: 100%; */
 }
 a {
   text-decoration: none;
@@ -27,7 +27,9 @@ a {
 button {
   cursor: pointer;
 }
-input, textarea {
+input, textarea, button {
+  box-shadow: none;
+  outline: none;
   font-family: 'Lato', sans-serif;
 }
 :root{
@@ -38,4 +40,98 @@ input, textarea {
   --bg-dark:  #282f35;
   --border-input: #d3d7d9;
   --color-text-input: #c8c8c8;
+}
+/* wrapper */
+.warper {
+  max-width: 160rem;
+  margin:0 auto;
+}
+.header {
+  min-height: 80rem;
+  background-image: url('../images/img-bg-header.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.nav {
+  margin-top: 3rem;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+.nav__item {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  position: relative;
+}
+.nav__item:first-child::after, .nav__item:nth-child(4)::after {
+  content: '.';
+  position: absolute;
+  bottom:0;
+  right: 0;
+  font-size: 2rem;
+}
+.nav__link {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  color: var(--title-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+/* feature */
+.feature__header {
+  padding: 11rem 1.5rem 14rem;
+  background-color: var(--bg-light);
+  text-align: center;
+}
+.feature__img-top {
+  margin: 0 auto 3rem;
+}
+.feature__heading {
+  font-size:1.8rem;
+  line-height:1.6;
+  text-transform: uppercase;
+  color: var(--title-color);
+  font-weight: bold;
+  text-align: center;
+  word-spacing: 0.9rem;
+  letter-spacing: 0.4rem;
+}
+.feature__heading-desc {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  max-width: 108rem;
+  margin: 0 auto;
+  margin-top: 3.4rem;
+}
+/* feature list */
+.feature__item {
+  display: flex;
+  flex-flow: row wrap;
+  height: 60rem;
+  overflow: hidden;
+}
+.feature__item-img {
+  width: 67%;
+  position: relative;
+}
+.feature__item-img .img__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.feature__item-img .img__brand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
